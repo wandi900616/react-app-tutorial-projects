@@ -1,0 +1,90 @@
+slider
+
+part 1
+
+set state people with value data
+set state index with value 0
+
+create section with class section
+
+inside that will have  div with class title (have h2 and span /)
+ div with class section-center
+
+iterate people element inside section center
+
+
+each people element return this:
+
+contain with <article>
+
+put img(person-img),h4,p(title), p(text), faQuatour(icon)
+
+
+add button with prev class and next class in section-center
+
+!!!!!!!!!!!!!!!!!!!   all item is on top of another,because of the css
+
+
+css note
+
+in section-center(parent) will set display flex. children will be put in one row.
+
+article element will be assigned to three class activeSlide,lastSlide,nextSlide
+
+activeSlide--> transform:translateX(0) to center
+lastSlide--> transform:translateX(-100%) to left
+activeSlide--> transform:translateX(100%) to right
+
+article element hidden (opacity zero), activeSlide will make opacity 1
+
+section-container: overflow hidden (left and right element is invisible)
+set height in section-container
+
+////////
+
+
+setting class 
+
+each of article(created thru iteration) will be assigned to activeSlide,lastSlide,nextSlide
+
+will compare with index in state
+
+by default all article assign to nextSlide
+
+if index of person same as index, its article will be assigned class activeSlide
+
+if index of person same as index-1, its article will be assigned class prevSlide,
+if index is 0 and the index of person is same as people.length - 1 (zero-based index), article assigned class prevSlide
+
+
+
+//
+
+
+
+on prev button, onClick effect is index will be set from current to minus 1
+on next button,onClick effect is index will be set from current to plus 1
+
+!! bug alert (index will get bigger than people length and negative)
+
+useEffect will be used to check index value. 
+if index value less than 0, index will be flipped around.
+if index value is more or same as people.length-1,index will be reset to 0
+
+useEffect used to fix bug of empty when index is less than zero or more than last index (people.length-1)
+
+useEffect used to check index and return sensible index(unsensible will be less than zero, more than people.length-1)
+
+useEffect have dependecy on index and people (from State)
+
+useEffect function to be executed:
+
+check lastIndex in people
+
+if index is less than zero, index will be reset to lastIndex
+if index is more than zero, index will be set to zero
+
+
+
+
+
