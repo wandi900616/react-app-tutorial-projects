@@ -7,13 +7,19 @@ const Tour = (props) => {
 
   return (
     <article className="single-tour">
+      <h5>inside an article.single-tour</h5>
+      <h5>contains img and footer</h5>
       <img src={image} alt={name} />
       <footer>
+      <h5>inside a footer</h5>
+      <h5>contain div.tour-info, p and button</h5>
         <div className="tour-info">
           <h4>{name}</h4>
           <h4 className="tour-price">${price}</h4>
           {/* tour-info and tour price is inside tour */}
         </div>
+        <h5>div.tour-info contain h4 for name and prices. the style of .tour-info is set to display:flex;justify-content:space-between</h5>
+
         <p>
           {readMore ? info : `${info.substring(0, 200)}...`}
           <button

@@ -155,7 +155,8 @@ Tours
 main {
   width: 90vw;
   max-width: var(--fixed-width);
-  margin: 5rem auto;
+  background:var(--clr-grey-6);
+  margin: 4rem auto;
 }
 .loading {
   text-align: center;
@@ -230,3 +231,12 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
 }
+
+.tour-iteration{
+  background:var(--clr-grey-8)
+}
+
+.tours-section {
+  background:var(--clr-grey-7)
+}
+

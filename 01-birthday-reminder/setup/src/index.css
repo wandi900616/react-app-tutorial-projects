@@ -160,6 +160,9 @@ main {
   column-gap: 0.75rem;
   margin-bottom: 1.5rem;
   align-items: center;
+  background:var(--clr-grey-1);
+  border-radius:2%
+
 }
 .person img {
   width: 75px;

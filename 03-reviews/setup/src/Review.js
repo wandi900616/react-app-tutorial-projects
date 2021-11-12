@@ -40,6 +40,8 @@ const Review = () => {
 
   return (
     <article className="review">
+      <h5>inside of article.review</h5>
+      <h5>contain div.img-container, h4.author,p.job, p, div.button-container,button.random-btn</h5>
       <div className="img-container">
         <img src={image} alt={name} className="person-img" />
         <span className="quote-icon">
@@ -47,8 +49,8 @@ const Review = () => {
         </span>
       </div>
       <h4 className="author">{name}</h4>
-      <p className="job"></p>
-      <p></p>
+      <p className="job">{job}</p>
+      <p>{text}</p>
       <div className="button-container">
         <button className="prev-btn" onClick={prevPerson}>
           <FaChevronLeft />
