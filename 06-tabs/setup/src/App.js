@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaAngleDoubleRight } from "react-icons/fa";
+import Buttons from "./Buttons";
+import Infos from "./Infos";
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 const url = "https://course-api.com/react-tabs-project";
@@ -31,44 +32,24 @@ function App() {
 
   return (
     <section className="section">
+      inside of section
       {/* betul ke section loading? */}
-      <div className="title">
+      <div className="title" style={{ backgroundColor: "pink" }}>
         <h2>experience</h2>
         <div className="underline"></div>
       </div>
-
-      <div className="jobs-center">
+      <div className="jobs-center" style={{ backgroundColor: "aqua" }}>
         {/* button container */}
-        <div className="btn-container">
-          {jobs.map((job, index) => {
-            return (
-              <button
-                className={`job-btn ${index === jobIndex && "active-btn"}`}
-                key={job.id}
-                onClick={() => {
-                  setJobIndex(index);
-                }}>
-                {job.title}
-              </button>
-            );
-          })}
-        </div>
-
+        {/* buttons */}
+        <Buttons data={jobs} setJobFunc={setJobIndex} jobIndex={jobIndex} />
+        {/* cannot passed as props={setJobIndex,jobs} */}
         {/* job info */}
-        <article className="job-info">
-          <h3>{title}</h3>
-          <h4>{company}</h4>
-          <p className="job-date">{dates}</p>
-
-          {duties.map((duty, index) => {
-            return (
-              <div key={index} className="job-desc">
-                <FaAngleDoubleRight className="job-icon"> </FaAngleDoubleRight>
-                <p>{duty}</p>
-              </div>
-            );
-          })}
-        </article>
+        <Infos
+          myTitle={title}
+          myCompany={company}
+          myDuties={duties}
+          myDates={dates}
+        />
       </div>
     </section>
   );
