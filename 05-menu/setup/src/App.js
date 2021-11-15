@@ -22,7 +22,12 @@ function App() {
 
   return (
     <main>
+      inside of main. main[main.'menu section']. which means there is main
+      within main and the classes are .menu and .section
       <main className="menu section">
+        inside of main.menu&section. main.menu&section[
+        <strong>div.title</strong>,<strong>MenuComp</strong>,
+        <strong>CategoriesComp</strong>]
         <div className="title">
           <h2>our menu</h2>
           <div className="underline"></div>

@@ -41,7 +41,10 @@ const Review = () => {
   return (
     <article className="review">
       <h5>inside of article.review</h5>
-      <h5>contain div.img-container, h4.author,p.job, p, div.button-container,button.random-btn</h5>
+      <h5>
+        contain div.img-container, h4.author,p.job, p,
+        div.button-container,button.random-btn
+      </h5>
       <div className="img-container">
         <img src={image} alt={name} className="person-img" />
         <span className="quote-icon">
@@ -50,7 +53,12 @@ const Review = () => {
       </div>
       <h4 className="author">{name}</h4>
       <p className="job">{job}</p>
-      <p>{text}</p>
+      <p>
+        {text.substring(0, 100)}... the people in here is change not by
+        classname, but by index. current index will match with index within
+        person array. For example, now the index for {name}'s data object is{" "}
+        {index}
+      </p>
       <div className="button-container">
         <button className="prev-btn" onClick={prevPerson}>
           <FaChevronLeft />

@@ -13,7 +13,7 @@ function App() {
         <div className="title">
           <h2>reviews</h2>
           <div className="underline"></div>
-          <h5>div.title. Contains h2(reviews) and underline</h5>
+          <h5>inside div.title. Contains h2(reviews) and underline</h5>
         </div>
         <Review />
       </section>
